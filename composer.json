@@ -13,16 +13,54 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "bower-asset/photoswipe",
+                "version": "4.1.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/dimsemenov/PhotoSwipe/archive/v4.1.1.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "require": {
         "php": ">=7.3",
+        "bower-asset/photoswipe": "^4.1",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
         "drupal/adminimal_admin_toolbar": "^1.11",
+        "drupal/block_visibility_groups": "^1.4",
+        "drupal/contact_emails": "^1.19",
+        "drupal/contact_storage": "^1.1",
+        "drupal/contact_tools": "^1.1",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-recommended": "^9.1",
+        "drupal/easy_breadcrumb": "^1.15",
+        "drupal/entity_usage": "^2.0@beta",
+        "drupal/field_group": "^3.1",
+        "drupal/imagemagick": "^3.1",
+        "drupal/metatag": "^1.16",
+        "drupal/paragraphs": "^1.12",
+        "drupal/pathauto": "^1.8",
+        "drupal/photoswipe": "3.x",
+        "drupal/redirect": "^1.6",
+        "drupal/robotstxt": "^1.4",
+        "drupal/scheduler": "^1.3",
+        "drupal/snippet_manager": "^1.8",
+        "drupal/swiftmailer": "^2.0",
+        "drupal/tvi": "^1.0@RC",
+        "drupal/twig_tweak": "^3.0",
+        "drupal/youtube": "^1.2",
         "drush/drush": "^10.3",
+        "oomphinc/composer-installers-extender": "^2.0",
         "vlucas/phpdotenv": "^5.1",
         "webflo/drupal-finder": "^1.2"
     },
@@ -43,7 +81,9 @@
         "classmap": [
             "scripts/composer/ScriptHandler.php"
         ],
-        "files": ["load.environment.php"]
+        "files": [
+            "load.environment.php"
+        ]
     },
     "scripts": {
         "pre-install-cmd": [
@@ -56,7 +96,8 @@
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "rm -f web/robots.txt"
         ]
     },
     "extra": {
@@ -65,13 +106,29 @@
                 "web-root": "web/"
             }
         },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library", "bower-asset/photoswipe", "type:npm-asset"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
         },
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
