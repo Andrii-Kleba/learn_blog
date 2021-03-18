@@ -1,0 +1,64 @@
+uuid: ae9ebd0b-1295-4328-9c7b-8d99866b615d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contain
+    - node.type.blog_entry
+    - paragraphs.paragraphs_type.code
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.gallery_youtube
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.image_and_text
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video_youtube
+  module:
+    - entity_reference_revisions
+id: node.blog_entry.field_contain
+field_name: field_contain
+entity_type: node
+bundle: blog_entry
+label: Contain
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      text: text
+      image: image
+      image_and_text: image_and_text
+      gallery: gallery
+      gallery_youtube: gallery_youtube
+      code: code
+      video_youtube: video_youtube
+    target_bundles_drag_drop:
+      code:
+        enabled: true
+        weight: -12
+      from_library:
+        weight: -10
+        enabled: false
+      gallery:
+        enabled: true
+        weight: -14
+      gallery_youtube:
+        enabled: true
+        weight: -13
+      image:
+        enabled: true
+        weight: -16
+      image_and_text:
+        enabled: true
+        weight: -15
+      text:
+        enabled: true
+        weight: -17
+      video_youtube:
+        enabled: true
+        weight: -11
+field_type: entity_reference_revisions

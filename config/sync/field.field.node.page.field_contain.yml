@@ -1,0 +1,64 @@
+uuid: d7568ac7-1afc-4bc5-b520-765a2cca9765
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contain
+    - node.type.page
+    - paragraphs.paragraphs_type.code
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.gallery_youtube
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.image_and_text
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video_youtube
+  module:
+    - entity_reference_revisions
+id: node.page.field_contain
+field_name: field_contain
+entity_type: node
+bundle: page
+label: Contain
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      text: text
+      image: image
+      gallery: gallery
+      image_and_text: image_and_text
+      video_youtube: video_youtube
+      gallery_youtube: gallery_youtube
+      code: code
+    target_bundles_drag_drop:
+      code:
+        enabled: true
+        weight: -11
+      from_library:
+        weight: -10
+        enabled: false
+      gallery:
+        enabled: true
+        weight: -15
+      gallery_youtube:
+        enabled: true
+        weight: -12
+      image:
+        enabled: true
+        weight: -16
+      image_and_text:
+        enabled: true
+        weight: -14
+      text:
+        enabled: true
+        weight: -17
+      video_youtube:
+        enabled: true
+        weight: -13
+field_type: entity_reference_revisions
