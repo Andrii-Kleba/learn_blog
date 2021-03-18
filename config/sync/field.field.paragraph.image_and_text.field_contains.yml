@@ -1,0 +1,21 @@
+uuid: 98719ef1-3250-403d-bf56-d9849406e24a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contains
+    - paragraphs.paragraphs_type.image_and_text
+  module:
+    - text
+id: paragraph.image_and_text.field_contains
+field_name: field_contains
+entity_type: paragraph
+bundle: image_and_text
+label: Contains
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

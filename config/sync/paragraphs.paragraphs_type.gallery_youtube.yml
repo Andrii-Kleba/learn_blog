@@ -1,0 +1,12 @@
+uuid: 332d4359-3bb9-4564-96da-bf15ff364581
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:37705e08-a771-447f-91b4-46dece01264f'
+id: gallery_youtube
+label: 'Gallery Youtube'
+icon_uuid: 37705e08-a771-447f-91b4-46dece01264f
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTQgNkgydjE0YzAgMS4xLjkgMiAyIDJoMTR2LTJINFY2em0xNi00SDhjLTEuMSAwLTIgLjktMiAydjEyYzAgMS4xLjkgMiAyIDJoMTJjMS4xIDAgMi0uOSAyLTJWNGMwLTEuMS0uOS0yLTItMnptLTggMTIuNXYtOWw2IDQuNS02IDQuNXoiLz48L3N2Zz4='
+description: ''
+behavior_plugins: {  }

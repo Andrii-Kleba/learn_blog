@@ -1,0 +1,21 @@
+uuid: bd56b841-03c7-40f9-adf8-839d95fb374e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contains
+    - paragraphs.paragraphs_type.text
+  module:
+    - text
+id: paragraph.text.field_contains
+field_name: field_contains
+entity_type: paragraph
+bundle: text
+label: Contains
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

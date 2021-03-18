@@ -1,0 +1,12 @@
+uuid: b090d929-e5a4-4c76-8f10-92b094e9f4a2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:150fb1e9-adb1-4662-bfe2-4bc48f37ab1a'
+id: code
+label: Code
+icon_uuid: 150fb1e9-adb1-4662-bfe2-4bc48f37ab1a
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDBWMHoiIGZpbGw9Im5vbmUiLz48cGF0aCBkPSJNOS40IDE2LjZMNC44IDEybDQuNi00LjZMOCA2bC02IDYgNiA2IDEuNC0xLjR6bTUuMiAwbDQuNi00LjYtNC42LTQuNkwxNiA2bDYgNi02IDYtMS40LTEuNHoiLz48L3N2Zz4='
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: cafb66ab-83d0-4402-9d43-2de9188279bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gallery_youtube
+    - paragraphs.paragraphs_type.gallery_youtube
+  module:
+    - youtube
+id: paragraph.gallery_youtube.field_gallery_youtube
+field_name: field_gallery_youtube
+entity_type: paragraph
+bundle: gallery_youtube
+label: 'Gallery Youtube'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: youtube
