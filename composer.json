@@ -43,6 +43,7 @@
         "drupal/contact_tools": "^1.1",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-recommended": "^9.1",
+        "drupal/devel": "^4.1",
         "drupal/easy_breadcrumb": "^1.15",
         "drupal/entity_usage": "^2.0@beta",
         "drupal/field_group": "^3.1",
