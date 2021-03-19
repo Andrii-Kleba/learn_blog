@@ -6,6 +6,8 @@ dependencies:
     - field.field.paragraph.gallery.field_image
     - field.field.paragraph.gallery.field_title
     - paragraphs.paragraphs_type.gallery
+  module:
+    - media_library
 id: paragraph.gallery.default
 targetEntityType: paragraph
 bundle: gallery
@@ -14,12 +16,9 @@ content:
   field_image:
     weight: 1
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: media_library_widget
     region: content
   field_title:
     weight: 0
