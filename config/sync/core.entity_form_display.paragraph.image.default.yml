@@ -5,10 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.image.field_image
     - field.field.paragraph.image.field_title
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.image
-  module:
-    - image
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image
@@ -17,10 +14,12 @@ content:
   field_image:
     weight: 1
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: image_image
+    type: entity_reference_autocomplete
     region: content
   field_title:
     weight: 0

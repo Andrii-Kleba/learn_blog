@@ -6,8 +6,6 @@ dependencies:
     - field.field.paragraph.video_youtube.field_title
     - field.field.paragraph.video_youtube.field_youtube
     - paragraphs.paragraphs_type.video_youtube
-  module:
-    - youtube
 id: paragraph.video_youtube.default
 targetEntityType: paragraph
 bundle: video_youtube
@@ -22,19 +20,12 @@ content:
     type: string
     region: content
   field_youtube:
+    type: entity_reference_entity_view
     weight: 1
     label: above
     settings:
-      youtube_size: 450x315
-      youtube_width: ''
-      youtube_height: ''
-      youtube_autoplay: false
-      youtube_mute: false
-      youtube_loop: false
-      youtube_controls: false
-      youtube_autohide: false
-      youtube_iv_load_policy: false
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    type: youtube_video
     region: content
 hidden: {  }

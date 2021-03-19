@@ -7,18 +7,18 @@ dependencies:
     - field.field.paragraph.gallery_youtube.field_title
     - paragraphs.paragraphs_type.gallery_youtube
   module:
-    - youtube
+    - media_library
 id: paragraph.gallery_youtube.default
 targetEntityType: paragraph
 bundle: gallery_youtube
 mode: default
 content:
   field_gallery_youtube:
+    type: media_library_widget
     weight: 1
     settings:
-      placeholder_url: ''
+      media_types: {  }
     third_party_settings: {  }
-    type: youtube
     region: content
   field_title:
     weight: 0

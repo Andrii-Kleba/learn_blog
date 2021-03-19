@@ -1,12 +1,11 @@
-uuid: 6af04e5c-aa6f-4b89-9aab-a5c002e8b56f
+uuid: 886a5623-978d-453b-a140-97b0e44d0fea
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_youtube
+    - media.type.remote_video
     - paragraphs.paragraphs_type.video_youtube
-  module:
-    - youtube
 id: paragraph.video_youtube.field_youtube
 field_name: field_youtube
 entity_type: paragraph
@@ -17,5 +16,14 @@ required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: youtube
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      remote_video: remote_video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

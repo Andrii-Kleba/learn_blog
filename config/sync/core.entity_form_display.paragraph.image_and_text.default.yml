@@ -6,10 +6,9 @@ dependencies:
     - field.field.paragraph.image_and_text.field_contains
     - field.field.paragraph.image_and_text.field_image
     - field.field.paragraph.image_and_text.field_title
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.image_and_text
   module:
-    - image
+    - media_library
     - text
 id: paragraph.image_and_text.default
 targetEntityType: paragraph
@@ -25,12 +24,11 @@ content:
     type: text_textarea
     region: content
   field_image:
-    weight: 1
+    type: media_library_widget
+    weight: 3
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
-    type: image_image
     region: content
   field_title:
     weight: 0

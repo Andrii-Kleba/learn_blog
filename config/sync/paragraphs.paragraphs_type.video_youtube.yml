@@ -5,7 +5,7 @@ dependencies:
   content:
     - 'file:file:3845ade9-65be-47fa-9330-fb2d3cc4e47e'
 id: video_youtube
-label: 'Video YouTube'
+label: 'Remote Video YouTube'
 icon_uuid: 3845ade9-65be-47fa-9330-fb2d3cc4e47e
 icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bS0yIDE0LjV2LTlsNiA0LjUtNiA0LjV6Ii8+PC9zdmc+'
 description: ''

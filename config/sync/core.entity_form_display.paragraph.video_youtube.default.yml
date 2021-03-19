@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.video_youtube.field_youtube
     - paragraphs.paragraphs_type.video_youtube
   module:
-    - youtube
+    - media_library
 id: paragraph.video_youtube.default
 targetEntityType: paragraph
 bundle: video_youtube
@@ -22,11 +22,11 @@ content:
     type: string_textfield
     region: content
   field_youtube:
+    type: media_library_widget
     weight: 1
     settings:
-      placeholder_url: ''
+      media_types: {  }
     third_party_settings: {  }
-    type: youtube
     region: content
 hidden:
   created: true

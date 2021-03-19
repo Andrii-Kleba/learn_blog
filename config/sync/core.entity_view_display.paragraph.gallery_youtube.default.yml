@@ -6,28 +6,19 @@ dependencies:
     - field.field.paragraph.gallery_youtube.field_gallery_youtube
     - field.field.paragraph.gallery_youtube.field_title
     - paragraphs.paragraphs_type.gallery_youtube
-  module:
-    - youtube
 id: paragraph.gallery_youtube.default
 targetEntityType: paragraph
 bundle: gallery_youtube
 mode: default
 content:
   field_gallery_youtube:
+    type: entity_reference_entity_view
     weight: 1
     label: above
     settings:
-      youtube_size: 450x315
-      youtube_width: ''
-      youtube_height: ''
-      youtube_autoplay: false
-      youtube_mute: false
-      youtube_loop: false
-      youtube_controls: false
-      youtube_autohide: false
-      youtube_iv_load_policy: false
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    type: youtube_video
     region: content
   field_title:
     weight: 0

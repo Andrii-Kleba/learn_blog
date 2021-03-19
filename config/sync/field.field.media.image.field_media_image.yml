@@ -1,24 +1,29 @@
-uuid: 9d8b9fcd-b2a3-4088-a32b-93441fe3380d
+uuid: 5973f6ff-6121-42be-9f7d-c2f7114361ed
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_images
-    - paragraphs.paragraphs_type.gallery
+    - field.storage.media.field_media_image
+    - media.type.image
+  enforced:
+    module:
+      - media
   module:
     - image
-id: paragraph.gallery.field_images
-field_name: field_images
-entity_type: paragraph
-bundle: gallery
-label: Images
+_core:
+  default_config_hash: pzPA-2JwyxlJ3qMb4L9viAnhNhbEhl2couH8A3FO020
+id: media.image.field_media_image
+field_name: field_media_image
+entity_type: media
+bundle: image
+label: Image
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: 'fields/paragraph.gallery.field_images/[date:custom:Y]-[date:custom:m]'
+  file_directory: 'fields/media.image.field_media_image/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
   max_resolution: ''

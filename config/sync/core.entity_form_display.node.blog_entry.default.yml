@@ -8,12 +8,10 @@ dependencies:
     - field.field.node.blog_entry.field_contain
     - field.field.node.blog_entry.field_file_attachments
     - field.field.node.blog_entry.field_promo_image
-    - image.style.thumbnail
     - node.type.blog_entry
   module:
     - field_group
-    - file
-    - image
+    - media_library
     - paragraphs
     - path
     - scheduler
@@ -129,19 +127,18 @@ content:
     type: paragraphs
     region: content
   field_file_attachments:
+    type: media_library_widget
     weight: 27
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
-    type: file_generic
     region: content
   field_promo_image:
-    weight: 26
+    type: media_library_widget
+    weight: 28
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
-    type: image_image
     region: content
   path:
     type: path
