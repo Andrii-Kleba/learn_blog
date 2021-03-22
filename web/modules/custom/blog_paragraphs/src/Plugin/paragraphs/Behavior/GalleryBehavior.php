@@ -41,11 +41,9 @@ class GalleryBehavior extends ParagraphsBehaviorBase {
    * @return array
    */
   public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode) {
-
     $image_per_row = $paragraph->getBehaviorSetting($this->getPluginId(), 'items_per_row', 4);
     $bem_block = 'paragraph-' . $paragraph->bundle() . ($view_mode === 'default' ? '' : '-' . $view_mode) . '--images-per-row-' . $image_per_row;
     $build['#attributes']['class'][] = Html::getClass($bem_block);
-
   }
 
   /**
