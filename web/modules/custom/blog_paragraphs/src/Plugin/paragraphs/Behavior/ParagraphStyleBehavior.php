@@ -1,0 +1,124 @@
+<?php
+
+namespace Drupal\blog_paragraphs\Plugin\paragraphs\Behavior;
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\paragraphs\Entity\ParagraphsType;
+use Drupal\paragraphs\ParagraphInterface;
+use Drupal\paragraphs\ParagraphsBehaviorBase;
+use Drupal\paragraphs\Annotation\ParagraphsBehavior;
+
+/**
+ * Class GalleryBehavior
+ *
+ * @ParagraphsBehavior(
+ *   id = "blog_paragraphs_paragraph_style",
+ *   label = @Translation("Paragraphs styles settings"),
+ *   description = @Translation("Settings for paragraphs style
+ *   behaviorparagraph type."), weight = 0,
+ * )
+ */
+class ParagraphStyleBehavior extends ParagraphsBehaviorBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function isApplicable(ParagraphsType $paragraphs_type): bool {
+    return TRUE;
+  }
+
+  /**
+   * Extends the paragraph render array with behavior;
+   *
+   * @param array $build
+   * @param \Drupal\paragraphs\Entity\Paragraph $paragraph
+   * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+   * @param $view_mode
+   *
+   * @return array
+   */
+  public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode) {
+    $bem_block = 'paragraph-' . $paragraph->bundle() . ($view_mode === 'default' ? '' : '-' . $view_mode);
+    $selected_styles = $paragraph->getBehaviorSetting($this->getPluginId(), 'styles', []);
+
+    foreach ($selected_styles as $style) {
+      $build['#attributes']['class'][] = $bem_block . '--' . Html::getClass($style);
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function submitBehaviorForm(ParagraphInterface $paragraph, array &$form, FormStateInterface $form_state) {
+    $style = [];
+    $filtered_values = $this->filterBehaviorFormSubmitValues($paragraph, $form, $form_state);
+
+    if (isset($filtered_values['style_wrapper'])) {
+      $style_groups = $filtered_values['style_wrapper'];
+
+      foreach ($style_groups as $group) {
+        foreach ($group as $style_name) {
+          $style[] = $style_name;
+        }
+      }
+
+      $paragraph->setBehaviorSettings($this->getPluginId(), ['styles' => $style]);
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function buildBehaviorForm(ParagraphInterface $paragraph, array &$form, FormStateInterface $form_state): array {
+    $form['style_wrapper'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Paragraph styles'),
+      '#open' => FALSE,
+    ];
+
+    $styles = $this->getStyles($paragraph);
+    $selected_styles = $paragraph->getBehaviorSetting($this->getPluginId(), 'styles', []);
+
+    foreach ($styles as $group_id => $group) {
+      $form['style_wrapper'][$group_id] = [
+        '#type' => 'checkboxes',
+        '#title' => $group['label'],
+        '#options' => $group['options'],
+        '#default_value' => $selected_styles,
+      ];
+    }
+
+    return $form;
+  }
+
+  /**
+   *  Return style for paragraph.
+   *
+   * @param \Drupal\paragraphs\ParagraphInterface $paragraph
+   */
+  public function getStyles(ParagraphInterface $paragraph): array {
+    $style = [];
+    if ($paragraph->hasField('field_title')) {
+      $style['title'] = [
+        'label' => $this->t('Paragraphs title'),
+        'options' => [
+          'title_bold' => $this->t('Bold'),
+          'title_centered' => $this->t('Center'),
+        ],
+      ];
+    }
+
+    $style['common'] = [
+      'label' => $this->t('Paragraphs common style'),
+      'options' => [
+        'style_black' => $this->t('Style black'),
+      ],
+    ];
+
+    return $style;
+  }
+
+}

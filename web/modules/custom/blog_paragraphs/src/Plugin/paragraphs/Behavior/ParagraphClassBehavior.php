@@ -15,19 +15,19 @@ use Drupal\paragraphs\Annotation\ParagraphsBehavior;
  * Class GalleryBehavior
  *
  * @ParagraphsBehavior(
- *   id = "blog_paragraphs_gallery",
- *   label = @Translation("Gallery Settings"),
- *   description = @Translation("Settings for gallery paragraph type."),
- *   weight = 0,
+ *   id = "blog_paragraphs_paragraph_class",
+ *   label = @Translation("Paragraphs class settings"),
+ *   description = @Translation("Settings for paragraphs class behavior
+ *   paragraph type."), weight = 0,
  * )
  */
-class GalleryBehavior extends ParagraphsBehaviorBase {
+class ParagraphClassBehavior extends ParagraphsBehaviorBase {
 
   /**
    * {@inheritdoc}
    */
   public static function isApplicable(ParagraphsType $paragraphs_type): bool {
-    return $paragraphs_type->id() === 'gallery';
+    return TRUE;
   }
 
   /**
@@ -41,24 +41,23 @@ class GalleryBehavior extends ParagraphsBehaviorBase {
    * @return array
    */
   public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode) {
-    $image_per_row = $paragraph->getBehaviorSetting($this->getPluginId(), 'items_per_row', 4);
-    $bem_block = 'paragraph-' . $paragraph->bundle() . ($view_mode === 'default' ? '' : '-' . $view_mode);
-    $build['#attributes']['class'][] = Html::getClass($bem_block . '--images-per-row-' . $image_per_row);
+    $classes_value = $paragraph->getBehaviorSetting($this->getPluginId(), 'classes', '');
+    $classes = explode(' ', $classes_value);
+
+    foreach ($classes as $class) {
+      $build['#attributes']['class'][] = Html::getClass($class);
+    }
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildBehaviorForm(ParagraphInterface $paragraph, array &$form, FormStateInterface $form_state): array {
-    $form['items_per_row'] = [
-      '#type' => 'select',
-      '#title' => $this->t('Number of images per row:'),
-      '#options' => [
-        '2' => $this->formatPlural(2, '(1) photo per row', '@count photos per row'),
-        '3' => $this->formatPlural(3, '(1) photo per row', '@count photos per row'),
-        '4' => $this->formatPlural(4, '(1) photo per row', '@count photos per row'),
-      ],
-      '#default_value' => $paragraph->getBehaviorSetting($this->getPluginId(), 'items_per_row', 4),
+    $form['classes'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Classes'),
+      '#description' => $this->t('Multiple classes separated by space. They will be processed via Html::getClass()'),
+      '#default_value' => $paragraph->getBehaviorSetting($this->getPluginId(), 'classes', ''),
     ];
 
     return $form;
