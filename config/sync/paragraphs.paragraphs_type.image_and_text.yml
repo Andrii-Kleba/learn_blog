@@ -4,9 +4,19 @@ status: true
 dependencies:
   content:
     - 'file:file:8d386293-0283-4499-83d6-9db6e922bf1e'
+  module:
+    - blog_paragraphs
 id: image_and_text
 label: 'Image and Text'
 icon_uuid: 8d386293-0283-4499-83d6-9db6e922bf1e
 icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTIwIDJINGMtMS4xIDAtMS45OS45LTEuOTkgMkwyIDIybDQtNGgxNGMxLjEgMCAyLS45IDItMlY0YzAtMS4xLS45LTItMi0yek01IDE0bDMuNS00LjUgMi41IDMuMDFMMTQuNSA4bDQuNSA2SDV6Ii8+PC9zdmc+'
 description: ''
-behavior_plugins: {  }
+behavior_plugins:
+  blog_paragraphs_image_and_text:
+    enabled: true
+  blog_paragraphs_paragraph_class:
+    enabled: true
+  blog_paragraphs_paragraph_style:
+    enabled: true
+  blog_paragraphs_paragraph_title:
+    enabled: true
