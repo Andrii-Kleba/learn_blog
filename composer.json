@@ -25,6 +25,7 @@
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
         "drupal/adminimal_admin_toolbar": "^1.11",
+        "drupal/antibot": "^1.4",
         "drupal/block_visibility_groups": "^1.4",
         "drupal/contact_emails": "^1.19",
         "drupal/contact_storage": "^1.1",
