@@ -1,0 +1,6 @@
+name: Blog
+description: 'Core module for custom code, hooks and functions.'
+type: module
+package: blog
+core: 8.x
+core_version_requirement: ^8 || ^9
