@@ -1,0 +1,5 @@
+name: Blog Hero
+description: Custom code for Paragraphs.
+type: module
+package: blog
+core: 8.x
