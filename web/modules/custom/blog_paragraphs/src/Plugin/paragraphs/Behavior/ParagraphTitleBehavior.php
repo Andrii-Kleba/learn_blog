@@ -69,7 +69,7 @@ class ParagraphTitleBehavior extends ParagraphsBehaviorBase {
     'h2' => 'string',
     'h3' => 'string',
     'h4' => 'string',
-    'div' => 'string'
+    'div' => 'string',
   ])]
   public function getHeadingOptions(): array {
     return [
