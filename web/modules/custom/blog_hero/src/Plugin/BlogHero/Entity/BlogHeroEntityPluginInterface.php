@@ -33,9 +33,9 @@ interface BlogHeroEntityPluginInterface extends BlogHeroPluginInterface {
   /**
    * Gets current entity.
    *
-   * @return \Drupal\Core\Entity\EntityInterface
+   * @return \Drupal\Core\Entity\EntityInterface|NULL
    *  The entity object.
    */
-  public function getEntity(): EntityInterface;
+  public function getEntity(): EntityInterface|NULL;
 
 }

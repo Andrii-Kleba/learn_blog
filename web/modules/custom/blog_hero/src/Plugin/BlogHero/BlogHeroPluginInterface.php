@@ -25,13 +25,14 @@ interface BlogHeroPluginInterface extends PluginInspectionInterface {
    */
   public function getWeight(): int;
 
+
   /**
    * The title.
    * Gets hero title.
    *
-   * @return string
+   * @return string|array|null
    */
-  public function getHeroTitle(): string;
+  public function getHeroTitle(): string|array|null;
 
   /**
    * The subtitle.

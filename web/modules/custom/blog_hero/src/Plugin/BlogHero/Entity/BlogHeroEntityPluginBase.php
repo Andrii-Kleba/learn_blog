@@ -27,8 +27,8 @@ abstract class BlogHeroEntityPluginBase extends BlogHeroPluginBase implements Bl
   /**
    * {@inheritdoc}
    */
-  public function getEntity(): EntityInterface {
-    return $this->pluginDefinition['entity'];
+  public function getEntity(): EntityInterface|NULL {
+    return $this->configuration['entity'];
   }
 
 }

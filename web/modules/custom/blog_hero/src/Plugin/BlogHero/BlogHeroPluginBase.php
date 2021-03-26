@@ -152,7 +152,7 @@ abstract class BlogHeroPluginBase extends PluginBase implements BlogHeroPluginIn
   /**
    * {@inheritdoc}
    */
-  public function getHeroTitle(): string {
+  public function getHeroTitle(): string|array|null {
     return $this->getPageTitle();
   }
 
