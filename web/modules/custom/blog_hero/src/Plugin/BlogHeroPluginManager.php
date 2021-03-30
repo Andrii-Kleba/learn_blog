@@ -117,10 +117,9 @@ class BlogHeroPluginManager extends DefaultPluginManager {
       foreach ($this->getDefinitions() as $plugin_id => $plugin) {
         if ($plugin['enabled']) {
           $same_entity_type = $plugin['entity_type'] === $entity->getEntityTypeId();
-          $needed_bundle = in_array($entity->bundle(), $plugin['entity_bundle']) || in_array('*', $plugin['$entity_bundle']);
+          $needed_bundle = in_array($entity->bundle(), $plugin['entity_bundle']) || in_array('*', $plugin['entity_bundle']);
 
           if ($same_entity_type && $needed_bundle) {
-
             $plugins[$plugin_id] = $plugin;
             $plugins[$plugin_id]['entity'] = $entity;
           }
