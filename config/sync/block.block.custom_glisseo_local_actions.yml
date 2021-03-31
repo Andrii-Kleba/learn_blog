@@ -1,0 +1,20 @@
+uuid: 0500f881-7b12-410a-9a02-7f75fda3a530
+langcode: en
+status: true
+dependencies:
+  theme:
+    - custom_glisseo
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: custom_glisseo_local_actions
+theme: custom_glisseo
+region: content
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

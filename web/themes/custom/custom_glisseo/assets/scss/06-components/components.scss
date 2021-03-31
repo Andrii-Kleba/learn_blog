@@ -1,0 +1,19 @@
+// =============================================================================
+// Specific cosmetic elements of UI.
+// =============================================================================
+
+// Settings.
+@import "../01-settings/core";
+
+// Tools.
+@import "../02-tools/core";
+
+// Components.
+@import "**/*.scss";
+
+// _____ Node ____ START _____
+
+@import "node/block-entry/node-blog-entry-teaser.scss";
+@import "node/block-entry/node-blog-entry-full.scss";
+
+// _____ Node ____ END _____

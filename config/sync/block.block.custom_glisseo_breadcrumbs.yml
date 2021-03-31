@@ -1,0 +1,22 @@
+uuid: 701444d8-4821-4c26-bf7c-666b367e338f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - custom_glisseo
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: custom_glisseo_breadcrumbs
+theme: custom_glisseo
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

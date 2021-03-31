@@ -1,0 +1,20 @@
+uuid: 687144cf-bd58-4e4d-a6e3-cb8a101ce10b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - custom_glisseo
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: custom_glisseo_page_title
+theme: custom_glisseo
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

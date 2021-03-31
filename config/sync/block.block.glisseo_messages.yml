@@ -1,0 +1,22 @@
+uuid: 18466435-d7e8-4f7f-9f9b-7ddf8b97d655
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - glisseo
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: glisseo_messages
+theme: glisseo
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

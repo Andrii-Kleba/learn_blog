@@ -1,0 +1,26 @@
+# Theme base information.
+screenshot: screenshot.png
+name: Glisseo custom theme
+type: theme
+base theme: glisseo
+description: 'Glisseo custom theme...'
+package: Glisseo
+core_version_requirement: ^9
+
+libraries:
+  - custom_glisseo/style.base
+  - custom_glisseo/style.layout
+  - custom_glisseo/style.component
+  - custom_glisseo/style.utilities
+
+regions:
+  header: Header
+  navigation: Navigation
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer
+
+# Disable system libraries.
+libraries-override:
+  system/base: false

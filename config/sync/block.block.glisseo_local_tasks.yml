@@ -1,0 +1,22 @@
+uuid: da43f8a6-4721-407d-aa85-770b959587b5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - glisseo
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: glisseo_local_tasks
+theme: glisseo
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
