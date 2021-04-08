@@ -1,0 +1,15 @@
+uuid: 9d51485d-8cb6-4613-86f7-7962dc19bcd5
+langcode: en
+status: true
+dependencies: {  }
+name: blog_hero
+label: 'Blog Hero'
+effects:
+  db7c5f56-2880-4e37-97ac-5c664a13c728:
+    uuid: db7c5f56-2880-4e37-97ac-5c664a13c728
+    id: image_scale
+    weight: 1
+    data:
+      width: 1920
+      height: null
+      upscale: false

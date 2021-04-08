@@ -1,6 +1,6 @@
 uuid: e5da1e5b-9e80-4b82-9257-944ee1c517b8
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -12,7 +12,7 @@ _core:
   default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
 id: custom_glisseo_footer
 theme: custom_glisseo
-region: header
+region: content
 weight: 0
 provider: null
 plugin: 'system_menu_block:footer'

@@ -1,6 +1,6 @@
 uuid: fc47e002-b5ab-4a9f-bc32-4dc8b30bd27e
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,7 +10,7 @@ _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: custom_glisseo_branding
 theme: custom_glisseo
-region: header
+region: content
 weight: 0
 provider: null
 plugin: system_branding_block
