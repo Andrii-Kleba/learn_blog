@@ -1,7 +1,10 @@
 // =============================================================================
-// Global configuration and variables.
+// Lost Grid settings.
+// @see http://lostgrid.org/docs.html
 // =============================================================================
 
-@import "variables.override.scss";
-@import "variables.scss";
-@import "lost.scss";
+@lost gutter 24px;
+@lost flexbox flex;
+@lost cycle auto;
+@lost clearing left;
+@lost rounder 100;

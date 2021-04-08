@@ -1,0 +1,26 @@
+.menu {
+  @include list-unstyled;
+  display: flex;
+  flex-flow: row wrap;
+
+  .menu__item {
+    margin-right: gap(3);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .menu__link {
+      display: block;
+      color: #fff;
+      font-size: 18px;
+      line-height: 42px;
+      font-weight: bold;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        color: rgb(193, 82, 82);
+      }
+    }
+  }
+}

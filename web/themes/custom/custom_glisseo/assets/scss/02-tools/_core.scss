@@ -3,7 +3,12 @@
 // =============================================================================
 
 // Mixins.
-//@import "mixins/some-mixin";
+@import "mixins/gradient.scss";
+@import "mixins/typography.scss";
+@import "mixins/helpers.scss";
+@import "mixins/media-breakpoint.scss";
 
 // Functions.
-//@import "functions/some-function";
+@import "functions/colors.scss";
+@import "functions/math.scss";
+@import "functions/media.scss";

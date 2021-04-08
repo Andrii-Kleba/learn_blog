@@ -3,10 +3,10 @@
 // =============================================================================
 
 // Settings.
-@import "../01-settings/core";
+@import "../01-settings/core.scss";
 
 // Tools.
-@import "../02-tools/core";
+@import "../02-tools/core.scss";
 
 // Components.
 @import "**/*.scss";
@@ -17,3 +17,27 @@
 @import "node/block-entry/node-blog-entry-full.scss";
 
 // _____ Node ____ END _____
+
+// ____ Snippet ____ START ____
+// Header ___
+@import "snippet/header-main.scss";
+// end Header __
+
+// Footer ____
+@import "snippet/footer-main.scss";
+// end Footer ____
+
+// ____ Snippet ____ END ____
+
+// ____ THEME (hook_theme) ____ START ____
+
+@import "theme/blog-hero.scss";
+
+// ____ THEME ____ END ____
+
+// ____ Block ____ START ____
+
+@import "block/menu.scss";
+@import "block/block--system-branding-block.scss";
+
+// ____ Block ____ END ____

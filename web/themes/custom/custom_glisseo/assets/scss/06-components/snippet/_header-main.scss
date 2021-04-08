@@ -1,0 +1,16 @@
+.header {
+  position: relative;
+
+  &__top {
+    @include media-container();
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    position: relative;
+    z-index: 20;
+  }
+
+  .branding {
+    margin-right: 30px;
+  }
+}

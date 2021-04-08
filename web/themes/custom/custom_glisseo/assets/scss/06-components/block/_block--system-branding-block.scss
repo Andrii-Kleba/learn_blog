@@ -1,0 +1,14 @@
+.branding {
+
+
+  &__name {
+    display: block;
+    color: #ef473a;
+    font-weight: bold;
+    font-size: 28px;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
