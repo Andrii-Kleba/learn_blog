@@ -656,6 +656,10 @@ ul.local-tasks--secondary {
       .menu .menu__item .menu__link:hover {
         color: #c15252; }
 
+.main-layout {
+  padding-top: 48px;
+  padding-bottom: 48px; }
+
 .node-blog-entry-full {
   background: blue; }
 
@@ -732,6 +736,20 @@ ul.local-tasks--secondary {
   text-transform: uppercase;
   text-align: center;
   font-size: 14px; }
+
+.footer__top {
+  color: black;
+  display: flex;
+  max-width: 50px;
+  max-height: 50px;
+  margin: 0 auto;
+  padding-top: 20px; }
+
+.footer__top::before {
+  content: url("https://www.flaticon.com/svg/vstatic/svg/992/992534.svg?token=exp=1617922223~hmac=464e9c6ef4d18c60ea2398b736f4216c");
+  display: block;
+  width: 50px;
+  height: 50px; }
 
 .header {
   position: relative; }
@@ -837,6 +855,12 @@ ul.local-tasks--secondary {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
+  .blog-hero__video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
   .blog-hero__subtitle {
     color: white;
     font-size: 18px;
@@ -851,7 +875,7 @@ ul.local-tasks--secondary {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to bottom, rgba(100, 243, 140, 0.4) 0%, rgba(247, 157, 0, 0.2) 100%);
+    background-image: linear-gradient(to bottom, rgba(100, 243, 140, 0.2) 0%, rgba(247, 157, 0, 0.2) 100%);
     background-repeat: repeat-x; }
 
 .node-blog-entry-full {
@@ -978,6 +1002,20 @@ ul.local-tasks--secondary {
   text-align: center;
   font-size: 14px; }
 
+.footer__top {
+  color: black;
+  display: flex;
+  max-width: 50px;
+  max-height: 50px;
+  margin: 0 auto;
+  padding-top: 20px; }
+
+.footer__top::before {
+  content: url("https://www.flaticon.com/svg/vstatic/svg/992/992534.svg?token=exp=1617922223~hmac=464e9c6ef4d18c60ea2398b736f4216c");
+  display: block;
+  width: 50px;
+  height: 50px; }
+
 .blog-hero {
   position: relative;
   margin-top: -42px;
@@ -1035,6 +1073,12 @@ ul.local-tasks--secondary {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
+  .blog-hero__video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
   .blog-hero__subtitle {
     color: white;
     font-size: 18px;
@@ -1049,7 +1093,7 @@ ul.local-tasks--secondary {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to bottom, rgba(100, 243, 140, 0.4) 0%, rgba(247, 157, 0, 0.2) 100%);
+    background-image: linear-gradient(to bottom, rgba(100, 243, 140, 0.2) 0%, rgba(247, 157, 0, 0.2) 100%);
     background-repeat: repeat-x; }
 
 .menu {
@@ -1079,5 +1123,9 @@ ul.local-tasks--secondary {
   font-size: 28px; }
   .branding__name:hover {
     color: white; }
+
+.main-layout {
+  padding-top: 48px;
+  padding-bottom: 48px; }
 
 /*# sourceMappingURL=maps/components.css.map */

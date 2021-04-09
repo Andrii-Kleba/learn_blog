@@ -12,11 +12,12 @@
 {% set main_layout_classes = [
   bem(main_layout_block, null, main_layout_modifiers),
 ] %}
-{{ snippet('header_main') }}
-<main{{ main_layout_attributes.addClass('layout-container').addClass(main_layout_classes) }}>
-  {{ page.sidebar_first }}
-  {{ page.content }}
-  {{ page.sidebar_second }}
-</main>
-{{ snippet('footer_main') }}
+{% include '@custom_glisseo/include/header.html.twig' %}
+{# /theme/custom/custom_glisseo/templates #}
 
+<main{{ main_layout_attributes.addClass('layout-container').addClass(main_layout_classes) }}>
+  {{ page.content }}
+  {{ page.sidebar_first }}
+{#  {{ page.sidebar_second }}#}
+</main>
+{% include '@custom_glisseo/include/footer.html.twig' %}

@@ -4,6 +4,7 @@ namespace Drupal\blog\Plugin\BlogHero\Path;
 
 use Drupal\blog_hero\Annotation\BlogHeroPath;
 use Drupal\blog_hero\Plugin\BlogHero\Path\BlogHeroPathPluginBase;
+use Drupal\media\MediaInterface;
 
 /**
  * Hero blog for path.
@@ -24,7 +25,10 @@ class BlogBlog extends BlogHeroPathPluginBase {
     $media_storage = $this->getEntityTypeManger()->getStorage('media');
     $media_image = $media_storage->load(11);
 
-    return $media_image->get('field_media_image')->entity->get('uri')->value;
+    if ($media_image instanceof MediaInterface) {
+
+      return $media_image->get('field_media_image')->entity->get('uri')->value;
+    }
   }
 
   /**
@@ -42,9 +46,12 @@ class BlogBlog extends BlogHeroPathPluginBase {
     $media_storage = $this->getEntityTypeManger()->getStorage('media');
     $media_video = $media_storage->load(10);
 
-    return [
-      'video/mp4' => $media_video->get('field_media_video_file')->entity->get('uri')->value,
-    ];
+    if ($media_video instanceof MediaInterface) {
+
+      return [
+        'video/mp4' => $media_video->get('field_media_video_file')->entity->get('uri')->value,
+      ];
+    }
   }
 
 }

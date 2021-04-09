@@ -55,7 +55,6 @@
       }
     }
   }
-
 }
 
 .footer__copyright {
@@ -65,4 +64,18 @@
   font-size: 14px;
 }
 
+.footer__top {
+  color: black;
+  display: flex;
+  max-width: 50px;
+  max-height: 50px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
 
+.footer__top::before {
+  content: url("https://www.flaticon.com/svg/vstatic/svg/992/992534.svg?token=exp=1617922223~hmac=464e9c6ef4d18c60ea2398b736f4216c");
+  display: block;
+  width: 50px;
+  height: 50px;
+}

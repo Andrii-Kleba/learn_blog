@@ -1,0 +1,22 @@
+{% macro links(bem_block) %}
+  {% set bem_block = not bem_block ?:'social-links' %}
+  {% set social_items = {
+    'facebook': 'https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-512.png',
+    'twitter': 'https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter_colored_svg-512.png',
+    'instagram': 'https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png',
+    'youtube': 'https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-512.png',
+    'linkedin': 'https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-512.png',
+  }
+  %}
+  <div class="{{ bem_block }}">
+    <ul class="{{ bem_block }}__items">
+      {% for name, url in social_items %}
+        <li class="{{ bem_block }}__item">
+          <a href="#" class="{{ bem_block }}__link {{ bem_block }}__link--{{ name }}">
+            <img src="{{ url }}" alt="{{ name }}" class="{{ bem_block }}__icon">
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endmacro %}
