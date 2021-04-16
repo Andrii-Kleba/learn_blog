@@ -1,0 +1,86 @@
+uuid: a015b18b-1374-4b5f-bd63-93bb6b6e59e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - core.entity_view_mode.node.full
+    - field.field.node.blog_entry.body
+    - field.field.node.blog_entry.field_blog_entry_tags
+    - field.field.node.blog_entry.field_comments
+    - field.field.node.blog_entry.field_contain
+    - field.field.node.blog_entry.field_file_attachments
+    - field.field.node.blog_entry.field_promo_image
+    - node.type.blog_entry
+  module:
+    - comment
+    - entity_reference_revisions
+    - text
+    - user
+id: node.blog_entry.full
+targetEntityType: node
+bundle: blog_entry
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_blog_entry_tags:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_comments:
+    weight: 6
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_contain:
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_file_attachments:
+    type: entity_reference_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_promo_image:
+    type: entity_reference_entity_view
+    weight: 5
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  previous_next:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

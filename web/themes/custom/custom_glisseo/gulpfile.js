@@ -6,6 +6,7 @@ const terser = require('gulp-terser');
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const postcssCustomMedia = require('postcss-custom-media');
+const lost = require('lost');
 
 const destinationToSource = function (file) {
   // Save result file in the folder of it's source.
@@ -27,6 +28,7 @@ function compileCss() {
     .pipe(sassGlob())
     .pipe(sass({includePaths: ['node_modules']}).on('error', sass.logError))
     .pipe(postcss([
+      lost(),
       postcssCustomMedia(),
       autoprefixer(),
     ]))

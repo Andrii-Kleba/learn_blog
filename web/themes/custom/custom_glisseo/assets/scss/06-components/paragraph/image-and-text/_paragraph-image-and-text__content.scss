@@ -1,0 +1,49 @@
+.paragraph-image-and-text {
+  $bem_block: &;
+
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &-field-title {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  &--image-size-4-12 {
+    #{$bem_block}-field-image {
+      lost-column: 4/12;
+    }
+
+    #{$bem_block}-field-contains {
+      lost-column: 8/12;
+    }
+  }
+
+  &--image-size-6-12 {
+    #{$bem_block}-field-image {
+      lost-column: 6/12;
+    }
+
+    #{$bem_block}-field-contains {
+      lost-column: 6/12;
+    }
+  }
+
+  &--image-size-8-12 {
+    #{$bem_block}-field-image {
+      lost-column: 8/12;
+    }
+
+    #{$bem_block}-field-contains {
+      lost-column: 4/12;
+    }
+  }
+
+  &--image-position-right {
+
+  }
+
+
+}

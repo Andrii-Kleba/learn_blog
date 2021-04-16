@@ -1,0 +1,26 @@
+/**
+ * @file
+ * Styles for paragraph styles Behavior.
+ */
+
+.paragraph-style {
+  &--title-bold {
+    .paragraph-title {
+      font-weight: bold;
+    }
+  }
+
+  &--title-centered {
+    .paragraph-title {
+      text-align: center;
+    }
+  }
+
+  &--style-black {
+    .paragraph-title {
+      background: rgba(0, 0, 0, 0.49);
+      color: white;
+      padding: gap(4);
+    }
+  }
+}

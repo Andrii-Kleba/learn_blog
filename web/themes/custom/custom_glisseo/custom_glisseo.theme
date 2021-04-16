@@ -4,3 +4,9 @@
  * @file
  * Custom hooks and functions special for theme.
  */
+
+// Include all files from the includes directory.
+$includes_path = dirname(__FILE__) . '/includes/*.inc';
+foreach (glob($includes_path) as $file_name) {
+  require_once dirname(__FILE__) . '/includes/' . basename($file_name);
+}

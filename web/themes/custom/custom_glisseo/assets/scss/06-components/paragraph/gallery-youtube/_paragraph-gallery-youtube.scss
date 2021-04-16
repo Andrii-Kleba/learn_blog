@@ -1,0 +1,23 @@
+.paragraph-gallery-youtube {
+  &-field-gallery-youtube__items {
+    lost-flex-container: flex;
+  }
+
+  &--videos-per-row-4 {
+    .paragraph-gallery-youtube-field-gallery-youtube__item {
+      lost-waffle: 3/12 4;
+    }
+  }
+
+  &--videos-per-row-3 {
+    .paragraph-gallery-youtube-field-gallery-youtube__item {
+      lost-waffle: 4/12 3;
+    }
+  }
+
+  &--videos-per-row-2 {
+    .paragraph-gallery-youtube-field-gallery-youtube__item {
+      lost-waffle: 6/12 2;
+    }
+  }
+}

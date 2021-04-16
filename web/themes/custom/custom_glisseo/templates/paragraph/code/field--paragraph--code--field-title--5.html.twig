@@ -1,0 +1,38 @@
+{% set field_block = 'field' %}
+{% set field_modifiers = [
+  'name-' ~ field_name,
+  'type-' ~ field_type,
+  'label-' ~ label_display,
+] %}
+{% set entity_block = bem_block([
+  entity_type,
+  bundle != entity_type ? bundle,
+  field_name,
+]) %}
+{% set entity_modifiers = [
+  view_mode,
+] %}
+{% set classes = [
+  bem(entity_block, null, entity_modifiers),
+  bem(field_block, null, field_modifiers),
+  'paragraph-title',
+] %}
+{% set title_classes = [
+  bem(entity_block, 'label'),
+  bem(field_block, 'label'),
+] %}
+{% set content_element = multiple ? 'items' : 'value' %}
+{% set content_classes = [
+  bem(entity_block, content_element),
+  bem(field_block, content_element),
+] %}
+{% set item_classes = [
+  bem(entity_block, 'item'),
+  bem(field_block, 'item'),
+] %}
+{% set paragraph = element['#object'] %}
+{% set title_wrapper = paragraph.getBehaviorSetting('blog_paragraphs_paragraph_title', 'title_wrapper', 'h2') %}
+<div {{ attributes.addClass(classes) }}>
+  {{ items[0].content }}
+</div>
+

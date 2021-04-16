@@ -1,23 +1,23 @@
 style.base:
   css:
     base:
-      assets/css/generic.css: {}
+      assets/css/generic.css: { }
 
 style.layout:
   css:
     layout:
-      assets/css/elements.css: {}
-      assets/css/objects.css: {}
+      assets/css/elements.css: { }
+      assets/css/objects.css: { }
 
 style.component:
   css:
     component:
-      assets/css/components.css: {}
+      assets/css/components.css: { }
 
 style.utilities:
   css:
     state:
-      assets/css/utilities.css: {}
+      assets/css/utilities.css: { }
 #  dependencies:
 #    - STARTER/google.fonts
 
@@ -25,3 +25,24 @@ style.utilities:
 #  css:
 #    theme:
 #      //fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&subset=cyrillic&display=swap: { type: external, minified: true }
+
+paragraph.code:
+  js:
+    assets/js/paragraph-code.js: { }
+  dependecies:
+    - custom_glisseo/highlightjs
+    - core/drupal
+    - core/jquery.once
+
+# Third party libraries
+highlightjs:
+  remote: https://highlightjs.org/
+  version: 9.10
+  license:
+    name: BSD
+    gpl-compatible: true
+  css:
+    theme:
+      /libraries/highlightjs/styles/agate.css: { }
+  js:
+    /libraries/highlightjs/highlight.pack.min.js: { minified: true }

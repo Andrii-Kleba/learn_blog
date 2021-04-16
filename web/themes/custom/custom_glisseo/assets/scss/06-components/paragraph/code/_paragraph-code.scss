@@ -1,0 +1,17 @@
+.paragraph-code {
+  &__content {
+    border: 1px solid gray(300);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &-field-title {
+    background: gray(100);
+    padding: gap(1) gap(2);
+    font-weight: bold;
+  }
+
+  &-field-contains {
+    padding: gap(1) gap(2);
+  }
+}

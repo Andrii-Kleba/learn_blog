@@ -6,9 +6,10 @@ dependencies:
     - field.field.paragraph.image_and_text.field_contains
     - field.field.paragraph.image_and_text.field_image
     - field.field.paragraph.image_and_text.field_title
+    - image.style.paragraph_image_text_4_of_12
     - paragraphs.paragraphs_type.image_and_text
   module:
-    - media
+    - photoswipe
     - text
 id: paragraph.image_and_text.default
 targetEntityType: paragraph
@@ -17,23 +18,28 @@ mode: default
 content:
   field_contains:
     weight: 2
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_image:
-    type: media_thumbnail
-    weight: 3
-    label: above
+    type: photoswipe_field_formatter
+    weight: 1
+    label: hidden
     settings:
-      image_style: ''
-      image_link: ''
+      photoswipe_node_style_first: ''
+      photoswipe_node_style: paragraph_image_text_4_of_12
+      photoswipe_image_style: ''
+      photoswipe_reference_image_field: field_media_image
+      photoswipe_caption: title
+      photoswipe_caption_custom: ''
+      photoswipe_view_mode: default
     third_party_settings: {  }
     region: content
   field_title:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

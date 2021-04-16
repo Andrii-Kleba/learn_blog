@@ -1,0 +1,9 @@
+.paragraph-video-youtube {
+
+  &--video-width-720px {
+    .paragraph-video-youtube-field-youtube__value {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+  }
+}

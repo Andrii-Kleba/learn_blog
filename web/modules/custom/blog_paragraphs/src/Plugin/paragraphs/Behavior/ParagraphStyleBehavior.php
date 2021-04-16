@@ -41,7 +41,7 @@ class ParagraphStyleBehavior extends ParagraphsBehaviorBase {
    * @return array
    */
   public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode) {
-    $bem_block = 'paragraph-' . $paragraph->bundle() . ($view_mode === 'default' ? '' : '-' . $view_mode);
+    $bem_block = 'paragraph-style' ;
     $selected_styles = $paragraph->getBehaviorSetting($this->getPluginId(), 'styles', []);
 
     foreach ($selected_styles as $style) {

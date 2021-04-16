@@ -1,6 +1,6 @@
 uuid: 687144cf-bd58-4e4d-a6e3-cb8a101ce10b
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - custom_glisseo

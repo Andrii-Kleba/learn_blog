@@ -17,14 +17,13 @@ mode: default
 content:
   field_contain:
     type: entity_reference_revisions_entity_view
-    weight: 102
-    label: above
+    weight: 0
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
-  links:
-    weight: 101
-    region: content
-hidden: {  }
+hidden:
+  links: true
+  previous_next: true
