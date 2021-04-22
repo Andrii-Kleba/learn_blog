@@ -1,0 +1,15 @@
+{% extends 'node.html.twig' %}
+
+{% block node %}
+  {{ content.field_promo_image }}
+  <h2 class="{{ block }}__title">
+    <a href="{{ url }}">{{ label }}</a>
+  </h2>
+  {{ content.field_blog_entry_tags }}
+  <div class="{{ block }}__footer">
+    <div class="{{ block }}_created">
+      {{ node.getCreatedTime|date('d.m.y') }}
+    </div>
+    {{ content.estimated_read_time }}
+  </div>
+{% endblock node %}

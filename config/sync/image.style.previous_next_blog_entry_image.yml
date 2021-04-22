@@ -1,0 +1,15 @@
+uuid: c792a415-5055-4c15-9809-3855ac1792bf
+langcode: en
+status: true
+dependencies: {  }
+name: previous_next_blog_entry_image
+label: 'Previous Next - Blog entry - image'
+effects:
+  1c1acc26-001f-44bf-830d-707267b037b4:
+    uuid: 1c1acc26-001f-44bf-830d-707267b037b4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 499
+      height: 120
+      anchor: center-center

@@ -58,7 +58,6 @@
 @import "paragraph/video-youtube/paragraph-video-youtube.scss";
 @import "paragraph/gallery-youtube/paragraph-gallery-youtube.scss";
 
-
 // Paragraph ___ end
 
 // Media _____ Start
@@ -67,3 +66,14 @@
 
 // Media ___ end
 
+// Views _____ Start
+
+@import "views/article.scss";
+
+// Views ___ end
+
+// Previous-Next _____ Start
+
+@import "theme/previous-next.scss";
+
+// Previous-Next ___ end

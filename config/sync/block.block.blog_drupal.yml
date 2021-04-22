@@ -1,0 +1,27 @@
+uuid: aca78610-b9dd-4c15-aab9-76cd554a4779
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.blog
+  module:
+    - block_visibility_groups
+    - system
+  theme:
+    - custom_glisseo
+id: blog_drupal
+theme: custom_glisseo
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: blog

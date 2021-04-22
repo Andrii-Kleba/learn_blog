@@ -1,9 +1,8 @@
 .paragraph-image-and-text {
   $bem_block: &;
 
-  &__content {
-    display: flex;
-    flex-flow: row wrap;
+  .paragraph-image_and_text__image-and-text {
+    lost-flex-container: row;
   }
 
   &-field-title {
@@ -40,10 +39,5 @@
       lost-column: 4/12;
     }
   }
-
-  &--image-position-right {
-
-  }
-
 
 }

@@ -1,4 +1,31 @@
+.app {
+
+}
+
 .main-layout {
-  padding-top: gap(6);
-  padding-bottom: gap(6);
+  background: rgba(255, 255, 255, 0.45);
+  position: relative;
+  z-index: 15;
+  padding-left: gap(35);
+  padding-right: gap(35);
+  display: grid;
+  grid-gap: var(--grid-gap);
+
+  &__inner {
+    lost-flex-container: row;
+    padding: gap(6) gap(3);
+    background: white;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+    padding: 0px 200px;
+  }
+
+  &--sidebar-first {
+    .region-content {
+      lost-column: 9/12;
+    }
+
+    .region-sidebar-first {
+      lost-column: 3/12;
+    }
+  }
 }

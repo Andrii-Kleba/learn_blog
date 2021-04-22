@@ -1,6 +1,8 @@
 .footer {
   background: gray(50);
   padding: gap(5);
+  position: relative;
+  z-index: 20;
 
   &__content {
     @include media-container();

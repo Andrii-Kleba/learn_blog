@@ -1,8 +1,3 @@
-.main-layout {
-  display: grid;
-  grid-gap: var(--grid-gap);
-}
-
 .main-layout--no-sidebar {
   grid-template-columns: 1fr;
 }
