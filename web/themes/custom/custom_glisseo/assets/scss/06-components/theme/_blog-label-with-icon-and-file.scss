@@ -1,0 +1,54 @@
+.blog-label-with-icon-and-file {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    margin-right: gap();
+    flex: 0 0 70px;
+    width: 70px;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  &__label {
+    display: block;
+    color: $text-color;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: gap(0.5);
+  }
+
+  &__filesize {
+    color: gray(600);
+    font-size: 14px;
+  }
+}
+
+.node-blog-entry-field-file-attachments {
+  margin-left: gap(-3);
+  margin-right: gap(-3);
+  padding: gap(3);
+  background: gray(50);
+  margin-bottom: gap(6);
+  border-top: 1px solid gray(100);
+  border-bottom: 1px solid gray(100);
+
+  &__label {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: gap(3);
+  }
+
+  &__items {
+    lost-flex-container: row;
+  }
+
+  &__item {
+    lost-waffle: 4/1;
+  }
+}
+

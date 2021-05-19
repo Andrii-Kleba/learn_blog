@@ -1,0 +1,11 @@
+{% set bem_block = 'blog-social-share' %}
+<div {{ attributes.addClass(bem_block) }}>
+  <div class="{{ bem_block }}__label">Share /</div>
+  <div class="{{ bem_block }}__links">
+    <a
+      href="https://www.facebook.com/sharer/sharer.php?u={{ url }}"
+      class="{{ bem_block }}__link {{ bem_block }}__link-facebook"
+      rel="noopener nofollow"
+      target="_blank">facebook</a>
+  </div>
+</div>

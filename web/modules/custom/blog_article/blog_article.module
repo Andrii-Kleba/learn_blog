@@ -27,6 +27,13 @@ function blog_article_entity_extra_field_info(): array {
     'visible' => FALSE,
   ];
 
+  $extra['node']['blog_entry']['display']['social_share'] = [
+    'label' => t('Links to share social'),
+    'weight' => 100,
+    'visible' => FALSE,
+  ];
+
+
   return $extra;
 }
 
@@ -54,6 +61,16 @@ function blog_article_node_view(array &$build, NodeInterface $node, EntityViewDi
     $build['previous_next_blog_entry'] = [
       '#theme' => 'blog_previous_next__blog_entry',
       '#entity' => $node,
+    ];
+  }
+
+  if ($display->getComponent('previous_next_blog_entry')) {
+    $build['social_share'] = [
+      '#theme' => 'blog_social_share',
+      '#url' => $node->toUrl('canonical', ['absolute' => TRUE])
+        ->toString(TRUE)
+        ->getGeneratedUrl(),
+      '#label' => $node->label(),
     ];
   }
 }

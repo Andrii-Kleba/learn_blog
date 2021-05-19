@@ -28,6 +28,7 @@
         "drupal/antibot": "^1.4",
         "drupal/block_visibility_groups": "^1.4",
         "drupal/bootstrap_barrio": "^5.1",
+        "drupal/console": "^1.9",
         "drupal/contact_emails": "^1.19",
         "drupal/contact_storage": "^1.1",
         "drupal/contact_tools": "^1.1",

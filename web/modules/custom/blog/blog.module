@@ -22,6 +22,23 @@ function blog_theme($existing, $type, $theme, $path) {
       'file' => 'blog.theme.inc',
       'pattern' => 'blog_previous_next__',
     ],
+    'blog_social_share' => [
+      'variables' => [
+        'url' => NULL,
+        'label' => NULL,
+      ],
+      'file' => 'blog.theme.inc',
+    ],
+    'blog_label_with_icon_and_file' => [
+      'variables' => [
+        'url' => NULL,
+        'label' => NULL,
+        'filesize' => NULL,
+        'media_type' => NULL,
+        'mime_type' => NULL,
+      ],
+      'file' => 'blog.theme.inc',
+    ],
   ];
 }
 

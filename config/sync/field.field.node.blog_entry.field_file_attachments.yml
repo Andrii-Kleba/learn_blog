@@ -4,7 +4,11 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_file_attachments
+    - media.type.audio
     - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
     - node.type.blog_entry
 id: node.blog_entry.field_file_attachments
 field_name: field_file_attachments
@@ -20,10 +24,14 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
+      audio: audio
       document: document
+      image: image
+      remote_video: remote_video
+      video: video
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: document
 field_type: entity_reference

@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.blog_entry.field_promo_image
     - node.type.blog_entry
   module:
+    - blog
     - comment
     - entity_reference_revisions
     - user
@@ -22,7 +23,7 @@ bundle: blog_entry
 mode: full
 content:
   field_comments:
-    weight: 3
+    weight: 4
     label: above
     settings:
       view_mode: default
@@ -31,7 +32,7 @@ content:
     type: comment_default
     region: content
   field_contain:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       view_mode: default
@@ -40,12 +41,10 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_file_attachments:
-    type: entity_reference_entity_view
-    weight: 1
+    type: blog_label_with_icon_and_file
+    weight: 2
     label: above
-    settings:
-      view_mode: default
-      link: false
+    settings: {  }
     third_party_settings: {  }
     region: content
   previous_next:
@@ -54,7 +53,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   previous_next_blog_entry:
-    weight: 2
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  social_share:
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

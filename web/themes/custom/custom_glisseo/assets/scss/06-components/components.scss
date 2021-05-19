@@ -32,6 +32,7 @@
 // ____ THEME (hook_theme) ____ START ____
 
 @import "theme/blog-hero.scss";
+@import "theme/blog-label-with-icon-and-file.scss";
 
 // ____ THEME ____ END ____
 
@@ -75,5 +76,6 @@
 // Previous-Next _____ Start
 
 @import "theme/previous-next.scss";
+@import "theme/blog-social-share.scss";
 
 // Previous-Next ___ end

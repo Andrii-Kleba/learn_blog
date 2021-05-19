@@ -1285,6 +1285,73 @@ ul.local-tasks--secondary {
     .blog-hero__tag:hover {
       background: #2a49f1; }
 
+.blog-label-with-icon-and-file {
+  display: flex;
+  align-items: center; }
+  .blog-label-with-icon-and-file__icon {
+    margin-right: 8px;
+    flex: 0 0 70px;
+    width: 70px; }
+    .blog-label-with-icon-and-file__icon svg {
+      width: 100%; }
+  .blog-label-with-icon-and-file__label {
+    display: block;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 4px; }
+  .blog-label-with-icon-and-file__filesize {
+    color: #757575;
+    font-size: 14px; }
+
+.node-blog-entry-field-file-attachments {
+  margin-left: -24px;
+  margin-right: -24px;
+  padding: 24px;
+  background: #fafafa;
+  margin-bottom: 48px;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5; }
+  .node-blog-entry-field-file-attachments__label {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 24px; }
+  .node-blog-entry-field-file-attachments__items {
+    display: flex;
+    flex-flow: row wrap; }
+  .node-blog-entry-field-file-attachments__item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100% * 4/1 - (24px - 24px * 4/1));
+    width: calc(100% * 4/1 - (24px - 24px * 4/1));
+    max-width: calc(100% * 4/1 - (24px - 24px * 4/1));
+    height: calc(100% * 4/1 - (24px - 24px * 4/1)); }
+  .node-blog-entry-field-file-attachments__item:nth-child(1n) {
+    margin-right: 24px;
+    margin-bottom: 24px;
+    margin-left: 0; }
+  .node-blog-entry-field-file-attachments__item:last-child {
+    margin-right: 0;
+    margin-bottom: 0; }
+  .node-blog-entry-field-file-attachments__item:nth-child(1n) {
+    margin-right: 0;
+    margin-left: auto; }
+  .node-blog-entry-field-file-attachments__item:nth-last-child(-n + 1) {
+    margin-bottom: 0; }
+
+.blog-social-share {
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center; }
+  .blog-social-share__label {
+    color: #616161;
+    font-size: 20px; }
+  .blog-social-share__link {
+    color: #757575;
+    padding: 5px; }
+
 .previous-next {
   margin-bottom: 48px;
   display: flex;
@@ -1660,6 +1727,62 @@ ul.local-tasks--secondary {
     margin-right: 8px; }
     .blog-hero__tag:hover {
       background: #2a49f1; }
+
+.blog-label-with-icon-and-file {
+  display: flex;
+  align-items: center; }
+  .blog-label-with-icon-and-file__icon {
+    margin-right: 8px;
+    flex: 0 0 70px;
+    width: 70px; }
+    .blog-label-with-icon-and-file__icon svg {
+      width: 100%; }
+  .blog-label-with-icon-and-file__label {
+    display: block;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 4px; }
+  .blog-label-with-icon-and-file__filesize {
+    color: #757575;
+    font-size: 14px; }
+
+.node-blog-entry-field-file-attachments {
+  margin-left: -24px;
+  margin-right: -24px;
+  padding: 24px;
+  background: #fafafa;
+  margin-bottom: 48px;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5; }
+  .node-blog-entry-field-file-attachments__label {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 24px; }
+  .node-blog-entry-field-file-attachments__items {
+    display: flex;
+    flex-flow: row wrap; }
+  .node-blog-entry-field-file-attachments__item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100% * 4/1 - (24px - 24px * 4/1));
+    width: calc(100% * 4/1 - (24px - 24px * 4/1));
+    max-width: calc(100% * 4/1 - (24px - 24px * 4/1));
+    height: calc(100% * 4/1 - (24px - 24px * 4/1)); }
+  .node-blog-entry-field-file-attachments__item:nth-child(1n) {
+    margin-right: 24px;
+    margin-bottom: 24px;
+    margin-left: 0; }
+  .node-blog-entry-field-file-attachments__item:last-child {
+    margin-right: 0;
+    margin-bottom: 0; }
+  .node-blog-entry-field-file-attachments__item:nth-child(1n) {
+    margin-right: 0;
+    margin-left: auto; }
+  .node-blog-entry-field-file-attachments__item:nth-last-child(-n + 1) {
+    margin-bottom: 0; }
 
 .menu {
   margin: 0;
@@ -2140,5 +2263,16 @@ ul.local-tasks--secondary {
   padding: 8px;
   border-radius: 2px;
   margin-left: 2px; }
+
+.blog-social-share {
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center; }
+  .blog-social-share__label {
+    color: #616161;
+    font-size: 20px; }
+  .blog-social-share__link {
+    color: #757575;
+    padding: 5px; }
 
 /*# sourceMappingURL=maps/components.css.map */
