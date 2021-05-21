@@ -1,0 +1,12 @@
+services:
+  blog_article.manager:
+    class: 'Drupal\blog_article\Service\BlogManager'
+    arguments: ['@entity_type.manager']
+  blog_article.lazy_builder:
+    class: 'Drupal\blog_article\Service\BlogLazyBuilder'
+
+  blog_article.event_subscriber:
+    class: Drupal\blog_article\EventSubscriber\BlogArticleSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

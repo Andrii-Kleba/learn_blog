@@ -3,6 +3,7 @@
 //use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 //use Drupal\node\Entity\NodeType;
 //use Drupal\node\NodeInterface;
+use Drupal\Core\Database\Query\AlterableInterface;
 use Drupal\imagemagick\ImagemagickExecArguments;
 
 /**
@@ -78,4 +79,11 @@ function blog_imagemagick_arguments_alter(ImagemagickExecArguments $arguments, $
   $arguments->add('-sampling-factor 4:2:0')
     ->add('-interlace Plane')
     ->add('-strip');
+}
+
+/**
+ * Implements hook_query_TAG_alter() for entity_query_random.
+ */
+function blog_query_entity_query_random_alter(AlterableInterface $query) {
+  $query->orderRandom();
 }

@@ -1191,6 +1191,20 @@ ul.local-tasks--secondary {
   .header .branding {
     margin-right: 30px; }
 
+.blog-article-related-posts {
+  margin-bottom: 24px;
+  background: #fafafa;
+  padding: 20px; }
+  .blog-article-related-posts__title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px; }
+  .blog-article-related-posts__items {
+    display: flex; }
+  .blog-article-related-posts__item {
+    flex-wrap: wrap;
+    margin: 8px; }
+
 .blog-hero {
   position: relative;
   margin-top: -42px;
@@ -1783,6 +1797,20 @@ ul.local-tasks--secondary {
     margin-left: auto; }
   .node-blog-entry-field-file-attachments__item:nth-last-child(-n + 1) {
     margin-bottom: 0; }
+
+.blog-article-related-posts {
+  margin-bottom: 24px;
+  background: #fafafa;
+  padding: 20px; }
+  .blog-article-related-posts__title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px; }
+  .blog-article-related-posts__items {
+    display: flex; }
+  .blog-article-related-posts__item {
+    flex-wrap: wrap;
+    margin: 8px; }
 
 .menu {
   margin: 0;

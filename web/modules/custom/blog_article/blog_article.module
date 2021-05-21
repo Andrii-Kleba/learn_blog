@@ -10,6 +10,27 @@ use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\node\NodeInterface;
 
 /**
+ * Implements hook_theme.
+ */
+function blog_article_theme() {
+  return [
+    'blog_article_related_posts' => [
+      'variables' => [
+        'max' => 4,
+        'max_exact_same_tags' => 2,
+      ],
+      'file' => 'blog_article.theme.inc',
+    ],
+    'blog_article_random_posts' => [
+      'variables' => [
+
+      ],
+      'file' => 'blog_article.theme.inc',
+    ],
+  ];
+}
+
+/**
  * Implements hook_entity_extra_field_info().
  */
 function blog_article_entity_extra_field_info(): array {
@@ -32,6 +53,19 @@ function blog_article_entity_extra_field_info(): array {
     'weight' => 100,
     'visible' => FALSE,
   ];
+
+  $extra['node']['blog_entry']['display']['related_posts'] = [
+    'label' => t('Related posts'),
+    'weight' => 100,
+    'visible' => FALSE,
+  ];
+
+  $extra['node']['blog_entry']['display']['random_posts'] = [
+    'label' => t('Random posts'),
+    'weight' => 100,
+    'visible' => FALSE,
+  ];
+
 
 
   return $extra;
@@ -73,6 +107,22 @@ function blog_article_node_view(array &$build, NodeInterface $node, EntityViewDi
       '#label' => $node->label(),
     ];
   }
+
+  if ($display->getComponent('related_posts')) {
+    $build['related_posts'] = [
+      '#theme' => 'blog_article_related_posts',
+    ];
+  }
+
+  if ($display->getComponent('random_posts')) {
+    $build['random_posts'] = [
+      '#create_placeholder' => TRUE,
+      '#lazy_builder' => [
+        'blog_article.lazy_builder:randomBlogPosts', [],
+      ],
+    ];
+  }
+
 }
 
 /**
