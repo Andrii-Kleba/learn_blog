@@ -1,7 +1,8 @@
 cdn: true
 minified: true
-theme: default
+theme: ambiance
 language_modes:
+  - php
   - xml
 _core:
   default_config_hash: OQEHakzIUDx3nWOx2W5M-867WqcYLA_4mWia4mgdaqA

@@ -23,7 +23,7 @@ bundle: blog_entry
 mode: full
 content:
   field_comments:
-    weight: 4
+    weight: 6
     label: above
     settings:
       view_mode: default
@@ -54,6 +54,16 @@ content:
     third_party_settings: {  }
   previous_next_blog_entry:
     weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  random_posts:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  related_posts:
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
