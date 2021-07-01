@@ -1,0 +1,17 @@
+{
+    "name": "drupal/products",
+    "description": "Importing product like a boss",
+    "type": "drupal-module",
+    "autoload": {
+        "psr-4": {
+            "Drupal\\products\\": "src/"
+        }
+    },
+    "extra": {
+        "drush": {
+            "seivices": {
+                "drush.services.yml": "^10.3"
+            }
+        }
+    }
+}

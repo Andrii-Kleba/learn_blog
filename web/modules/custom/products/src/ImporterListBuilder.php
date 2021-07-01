@@ -1,0 +1,35 @@
+<?php
+
+namespace Drupal\products;
+
+use Drupal\Core\Config\Entity\ConfigEntityListBuilder;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Class ImporterListBuilder
+ *
+ * @package Drupal\products
+ */
+class ImporterListBuilder extends ConfigEntityListBuilder {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function buildHeader(): array {
+    $header['label'] = $this->t('Importer');
+    $header['id'] = $this->t('Machine name');
+
+    return $header + parent::buildHeader();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function buildRow(EntityInterface $entity): array {
+    $row['label'] = $entity->label();
+    $row['id'] = $entity->id();
+
+    return $row + parent::buildRow($entity);
+  }
+
+}

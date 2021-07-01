@@ -1,0 +1,5 @@
+<?php
+
+function products_update_9001(){
+  \Drupal::service("router.builder")->rebuild();
+}

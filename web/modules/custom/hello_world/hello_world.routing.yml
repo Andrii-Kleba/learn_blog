@@ -1,0 +1,39 @@
+hello_world.hello:
+  path: '/hello'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\HelloWorldController::helloWorld'
+    _title: 'Hello World Controller'
+  requirements:
+    _permission: 'access content'
+
+hello_world.greeting_form:
+  path: '/admin/config/salutation-configuration'
+  defaults:
+    _form: 'Drupal\hello_world\Form\SalutationConfigurationForm'
+    _title: 'Salutation configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+hello_world.Hello_world_first_theme:
+  path: '/hello-world-first'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\HelloWorldFirstController::build'
+    _title: 'Hello World First HOOK'
+  requirements:
+    _permission: 'access content'
+
+hello_world.hello_world_second:
+  path: '/hello-world-second'
+  defaults:
+    _title: 'Hello world second examples'
+    _controller: '\Drupal\hello_world\Controller\HelloWorldSecondController::build'
+  requirements:
+    _permission: 'access content'
+
+hello_world.quote:
+  path: '/hello-world-quote'
+  defaults:
+    _title: 'Hello World Quote'
+    _controller: '\Drupal\hello_world\Controller\HelloWorldQuoteController::build'
+  requirements:
+    _permission: 'access content'
