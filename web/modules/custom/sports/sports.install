@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * The sports module supports functionality.
+ *
+ * @file
+ */
+
+/**
+ * Implement hook_schema().
+ */
+function sports_schema(): array {
+  $schema = [];
+
+  $schema['teams'] = [
+    'description' => 'The table that hold team data.',
+    'fields' => [
+      'id' => [
+        'description' => 'The primary identifier',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'description' => 'The team name.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'description' => [
+        'description' => 'The team description.',
+        'type' => 'text',
+        'size' => 'normal',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  $schema['player'] = [
+    'description' => 'The table that holds player data.',
+    'fields' => [
+      'id' => [
+        'description' => 'The primary identifier',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'team_id' => [
+        'description' => 'The id of the team it belongs to.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+      ],
+      'name' => [
+        'description' => 'The player name.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'data' => [
+        'description' => 'Arbitrary data about the player',
+        'type' => 'blob',
+        'size' => 'big',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
+
+/**
+ * Implement hook_update_N().
+ *
+ * @param $sandbox
+ */
+function sports_update_9002(&$sandbox) {
+  $field = [
+    'description' => 'The team location',
+    'type' => 'varchar',
+    'length' => 255,
+  ];
+  $schema = \Drupal::database()->schema();
+  $schema->addField('teams', 'location', $field);
+}

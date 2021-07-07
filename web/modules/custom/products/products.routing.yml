@@ -1,0 +1,4 @@
+entity.product.canonical:
+  path: '/admin/structure/product/{product}'
+  requirements:
+    _entity_access: 'product.update'
